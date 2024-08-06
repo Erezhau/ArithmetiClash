@@ -1,0 +1,224 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient( rgb(20, 47, 154), rgb(100, 1, 176));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  background-color: rgb(53, 49, 49);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-bottom: 0.2vw;
+  color: rgb(177, 16, 246);
+  text-shadow:
+    0 0 1px white,
+    0 0 2px rgba(177, 16, 246, 1),
+    0 0 5px rgba(177, 16, 246, 0.8),
+    0 0 6px rgba(177, 16, 246, 0.6),
+    0 0 7px rgba(177, 16, 246, 0.4),
+    0 0 8px rgba(177, 16, 246);
+}
+
+.form {
+  padding: 0.2vw;
+  
+  color:rgb(177, 16, 246);
+  text-shadow:
+    0 0 1px white,
+    0 0 2px rgba(177, 16, 246, 1),
+    0 0 5px rgba(177, 16, 246, 0.8),
+    0 0 6px rgba(177, 16, 246, 0.6),
+    0 0 7px rgba(177, 16, 246, 0.4),
+    0 0 8px rgba(177, 16, 246);
+}
+
+h2 {
+  
+  font-size: 1.4rem;
+}
+
+.input-container {
+  position: relative;
+  gap: 0.5rem;
+
+}
+
+
+
+.inputBox {
+  position: relative;
+  display: grid;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.links {
+  display: flex;
+  justify-content:end ;
+  /*padding-left: 1rem;*/
+  right:0%; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.violet-button {
+  background-color: rgb(177, 16, 246);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.score {
+  font-size: 3rem;
+  color:rgb(63, 250, 53);
+  text-shadow:
+    0 0 1px white,
+    0 0 2px rgba(63, 250, 5, 0.9),
+    0 0 5px rgba(63, 250, 5, 0.8),
+    0 0 6px rgba(63, 250, 5, 0.6),
+    0 0 7px rgba(63, 250, 5, 0.4),
+    0 0 8px rgba(63, 250, 5, 0.2);
+}
+
+#added_points {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out
+}
+
+#added_points.show {
+  opacity: 1;
+}
+
+.question {
+  font-size: 2.3rem;
+  color:rgb(87, 70, 219);
+  text-shadow:
+    0 0 1px white,
+    0 0 2px rgba(87, 70, 219, 0.9),
+    0 0 5px rgba(87, 70, 219, 0.8),
+    0 0 6px rgba(87, 70, 219, 0.6),
+    0 0 7px rgba(87, 70, 219, 0.4),
+    0 0 8px rgba(87, 70, 219, 0.2);
+}
+
+input[type=number] {
+  background-color: lightgray;
+  border:none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.shards {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  top:0;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-bottom: 3em;
+}
+
+.triangle.transparent {
+  border-bottom:  1.732em solid transparent;
+}
+
+#tr1 {
+rotate: 60deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr1.red {
+  border-bottom-color: red;
+  
+}
+#tr2 {
+rotate:120deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr2.red {
+  border-bottom-color: red;
+}
+#tr3 {
+rotate:180deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr3.red {
+  border-bottom-color: red;
+}
+#tr4 {
+rotate:240deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr4.red {
+  border-bottom-color: red;
+}
+#tr5 {
+rotate:300deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr5.red {
+  border-bottom-color: red;
+}
+#tr6 {
+rotate: 360deg;
+position:absolute;
+border-left: 1em solid transparent;
+border-right: 1em solid transparent;
+border-bottom:  1.732em solid transparent;
+border-top: 1.732em solid transparent;
+}
+#tr6.red {
+  border-bottom-color: red;
+}

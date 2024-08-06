@@ -1,0 +1,36 @@
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
+// ... your Firebase project configuration (replace with yours)
+const firebaseConfig = {
+    apiKey: "AIzaSyBbIU4chmvZQUB32pSTKqzopsrVdG0xdSo",
+    authDomain: "test-angular-firebase-f893d.firebaseapp.com",
+    projectId: "test-angular-firebase-f893d",
+    storageBucket: "test-angular-firebase-f893d.appspot.com",
+    messagingSenderId: "505263045122",
+    appId: "1:505263045122:web:5437b9a2e9c8ab25dac51b"
+  };
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const signUpBtn = document.getElementById("sign_up_btn");
+
+signUpBtn.addEventListener("click", function() {
+  const email = document.getElementById("email_field").value;
+  const password = document.getElementById("password_field").value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up successfully!
+      const user = userCredential.user;
+      // ... handle successful signup (e.g., redirect, display message)
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle errors (e.g., display error message to the user)
+      console.error("Signup error:", errorCode, errorMessage);
+    });
+});
